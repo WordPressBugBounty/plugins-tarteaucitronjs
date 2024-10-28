@@ -90,7 +90,11 @@ function tarteaucitron_config_page() {
         if($abo > time()) {
             $abonnement = __('Subscription active', 'tarteaucitronjs').' '.date('Y-m-d', $abo);
         } else {
-            $abonnement = __('Subscription expired (limited to 3 services)', 'tarteaucitronjs');
+            if (!tarteaucitronNeedSubscription()) {
+                $abonnement = __('Subscription expired (limited to 3 services)', 'tarteaucitronjs');
+            } else {
+                $abonnement = __('Subscription expired', 'tarteaucitronjs');
+            }
             $css = 'background: red;border: 0;box-shadow: 0 0 0;text-shadow: 0 0 0;';
         }
                 
@@ -121,3 +125,4 @@ function tarteaucitron_config_page() {
         <style type="text/css">.tarteaucitronDiv{background:#FFF;padding: 10px;border: 1px solid #eee;border-bottom: 2px solid #ddd;max-width: 500px;}</style>';
     }
 }
+

@@ -2,7 +2,7 @@
 Contributors: amauric
 Tags: tarteaucitron, cookie, rgpd, gdpr
 Requires at least: 2.8
-Tested up to: 6.5
+Tested up to: 6.7
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -18,7 +18,7 @@ They have never been so easy to install!
 
 Open an account now: https://tarteaucitron.io/
 
-Free for 3 services (without automatic mode) or unlimited for 15€HT/month
+Unlimited use for 15€HT/month
 
 == Installation ==
 
@@ -34,6 +34,9 @@ Free for 3 services (without automatic mode) or unlimited for 15€HT/month
 3. Find the settings page through `Settings > tarteaucitron.js`
 
 == Changelog ==
+
+= 1.8.0 =
+* Announcement for the end of the free plugin
 
 = 1.7.0 =
 * Fix available locales
