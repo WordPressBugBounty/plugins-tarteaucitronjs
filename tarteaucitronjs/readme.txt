@@ -35,6 +35,9 @@ Unlimited use for 15€HT/month
 
 == Changelog ==
 
+= 1.8.1 =
+* Fix loading of textdomains
+
 = 1.8.0 =
 * Announcement for the end of the free plugin
 

@@ -3,7 +3,7 @@
 Plugin Name: tarteaucitron.js - Cookies legislation & GDPR
 Plugin URI: https://tarteaucitron.io/
 Description: Comply with the Cookies and GDPR legislation.
-Version: 1.8.0
+Version: 1.8.1
 Text Domain: tarteaucitronjs
 Domain Path: /languages/
 Author: tarteaucitron.io
@@ -17,7 +17,7 @@ define( 'TARTEAUCITRON_FILE'            	, __FILE__ );
 define( 'TARTEAUCITRON_PATH'       		, realpath( plugin_dir_path( TARTEAUCITRON_FILE ) ) . '/' );
 
 
-add_action( 'plugins_loaded', 'tarteaucitron_load_textdomain' );
+add_action( 'init', 'tarteaucitron_load_textdomain' );
 function tarteaucitron_load_textdomain() {
     load_plugin_textdomain( 'tarteaucitronjs', false, TARTEAUCITRON_PATH . '/languages' ); 
 }
