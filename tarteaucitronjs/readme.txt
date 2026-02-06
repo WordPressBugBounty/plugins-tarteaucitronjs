@@ -2,7 +2,7 @@
 Contributors: amauric
 Tags: tarteaucitron, cookie, rgpd, gdpr
 Requires at least: 2.8
-Tested up to: 6.8
+Tested up to: 6.9
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -15,7 +15,7 @@ Get a compliant and accessible cookie banner
 
 Automatic service detection, colors switcher, texts customization.
 
-Free for 7 days, licence required after the trial.
+Free for 7 days, license required after the trial.
 
 == Installation ==
 
@@ -31,6 +31,21 @@ Free for 7 days, licence required after the trial.
 3. Find the settings page through `Settings > tarteaucitron.io`
 
 == Changelog ==
+
+= 1.29.0
+* Bump version
+
+= 1.28.0
+* Bump version
+
+= 1.27.1 =
+* Align the version number with the Github version for security reports
+
+= 1.9.7 =
+* Add preconnect before the js tag
+
+= 1.9.6 =
+* Fix the mode detection
 
 = 1.9.5 =
 * Fix a stored cross-site scripting potential issue
