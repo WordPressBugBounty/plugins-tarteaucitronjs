@@ -3,7 +3,7 @@
 Plugin Name: tarteaucitron.io
 Plugin URI: https://tarteaucitron.io/
 Description: Compliant and accessible cookie banner
-Version: 1.29.0
+Version: 1.31.0
 Text Domain: tarteaucitronjs
 Domain Path: /languages/
 Author: Amauri
@@ -118,11 +118,11 @@ function tarteaucitronForceLocale() {
 
     $domain = $_SERVER['SERVER_NAME'];
 
-    echo '<link rel="dns-prefetch" href="//tarteaucitron.io">';
-    echo '<link rel="preconnect" href="https://tarteaucitron.io" crossorigin="">';
+    echo '<link rel="dns-prefetch" href="//cdntag.tarteaucitron.io">';
+    echo '<link rel="preconnect" href="https://cdntag.tarteaucitron.io" crossorigin="">';
     
     echo '<!--cloudflare-no-transform-->';
-    echo '<script type="text/javascript" src="https://tarteaucitron.io/load.js?domain='.$domain.'&uuid='.tac_sanitize(get_option('tarteaucitronUUID'), 'uuid').'"></script>';
+    echo '<script type="text/javascript" src="https://cdntag.tarteaucitron.io/load.js?domain='.$domain.'&uuid='.tac_sanitize(get_option('tarteaucitronUUID'), 'uuid').'"></script>';
 }
 
 add_action( 'admin_bar_menu', 'tarteaucitron_toolbar', PHP_INT_MAX );
@@ -198,7 +198,7 @@ function tarteaucitronNeedSubscription() {
 // Autoptimize minification
 function tarteaucitron_ao_exclude($excluded_js) {
     if(is_string($excluded_js)) {
-        $excluded_js .= ', tarteaucitron.io';
+        $excluded_js .= ', tarteaucitron.io, cdntag.tarteaucitron.io';
     }
     return $excluded_js;
 }
@@ -208,8 +208,9 @@ add_filter('autoptimize_filter_js_exclude', 'tarteaucitron_ao_exclude');
 function tarteaucitron_js_exclude($excluded_js) {
     if (is_array($excluded_js)) {
         $excluded_js[] = 'tarteaucitron.io';
+        $excluded_js[] = 'cdntag.tarteaucitron.io';
     } elseif (empty($excluded_js)) {
-        $excluded_js = ['tarteaucitron.io'];
+        $excluded_js = ['tarteaucitron.io', 'cdntag.tarteaucitron.io'];
     }
     return $excluded_js;
 }

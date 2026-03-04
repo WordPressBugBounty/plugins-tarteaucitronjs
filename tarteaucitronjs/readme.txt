@@ -32,10 +32,15 @@ Free for 7 days, license required after the trial.
 
 == Changelog ==
 
-= 1.29.0
+= 1.31.0 =
+* New CDN tag ⚡️
+* Switch to beacon for stats
 * Bump version
 
-= 1.28.0
+= 1.29.0 =
+* Bump version
+
+= 1.28.0 =
 * Bump version
 
 = 1.27.1 =
