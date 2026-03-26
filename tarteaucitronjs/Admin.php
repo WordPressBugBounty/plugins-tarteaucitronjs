@@ -100,7 +100,7 @@ function tarteaucitron_config_page() {
             $abonnement = "<span style='color:darkgreen'>OK</span>";
 
 
-            $url = 'https://cdntag.tarteaucitron.io/load.js?domain=' . $_SERVER['SERVER_NAME'] . '&uuid=' . tac_sanitize(get_option('tarteaucitronUUID'), 'uuid');
+            $url = 'https://tarteaucitron.io/load.js?_random=' . wp_rand(1, 99999999) . '&domain=' . $_SERVER['SERVER_NAME'] . '&uuid=' . tac_sanitize(get_option('tarteaucitronUUID'), 'uuid');
             $response = wp_remote_get($url);
 
             if (!is_wp_error($response) && isset($response['body'])) {
@@ -194,7 +194,7 @@ add_action('admin_notices', function () {
 
     if (tac_sanitize(get_option('tarteaucitronUUID'), 'uuid') == "") {return;}
 
-    $url = 'https://cdntag.tarteaucitron.io/load.js?domain=' . $_SERVER['SERVER_NAME'] . '&uuid=' . tac_sanitize(get_option('tarteaucitronUUID'), 'uuid');
+    $url = 'https://tarteaucitron.io/load.js?_random=' . wp_rand(1, 99999999) . '&domain=' . $_SERVER['SERVER_NAME'] . '&uuid=' . tac_sanitize(get_option('tarteaucitronUUID'), 'uuid');
     $response = wp_remote_get($url);
 
     if (!is_wp_error($response) && isset($response['body'])) {

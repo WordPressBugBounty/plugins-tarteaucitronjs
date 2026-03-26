@@ -32,6 +32,9 @@ Free for 7 days, license required after the trial.
 
 == Changelog ==
 
+= 1.32.0 =
+* Bypass the cache to check the license validity
+
 = 1.31.0 =
 * New CDN tag ⚡️
 * Switch to beacon for stats
